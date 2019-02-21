@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0">
+	<channel>
+		<title>Mario Casquero Jañez</title>
+		<link>http://192.168.20.19/DAW209/public_html/ProyectoDWES/Aplicacion1819/index.php</link>
+		<description>Proyecto aplicación</description>
+		<image>
+				<url>http://192.168.20.19/DAW209/public_html/ProyectoDWES/Aplicacion1819/webroot/media/imagenrss.png</url>
+				<title>Imagen RSS</title>
+				<link>http://192.168.20.19/DAW209/public_html/ProyectoDWES/Aplicacion1819/index.php</link>
+				<height>150px</height>
+			<width>200px</width>
+		</image>
+		<item>
+			<title>Diagrama de clases</title>
+			<link>
+				http://192.168.20.19/DAW209/public_html/ProyectoDWES/Aplicacion1819/doc/modelosAplicacion/190205_DiagramaClasesMarioCasquero.JPG
+			</link>
+			<description>Diagrama de clases</description>
+		</item>
+		
+		<item>
+			<title>Diagrama de casos de uso</title>
+			<link>
+				http://192.168.20.19/DAW209/public_html/ProyectoDWES/Aplicacion1819/doc/modelosAplicacion/190205_CasosDeUsoMarioCasquero.JPG
+			</link>
+			<description>Diagrama de casos de uso</description>
+		</item>
+		
+		<item>
+			<title>Árbol de navegación</title>
+			<link>
+				http://192.168.20.19/DAW209/public_html/ProyectoDWES/Aplicacion1819/doc/modelosAplicacion/190205_ArbolDeNavegacionMarioCasquero.jpg
+			</link>
+			<description>Árbol de navegación</description>
+		</item>
+		
+		<item>
+			<title>Modelo físico de datos</title>
+			<link>
+				http://192.168.20.19/DAW209/public_html/ProyectoDWES/Aplicacion1819/doc/modelosAplicacion/190203_ModeloFisicoDeDatosMarioCasquero.png
+			</link>
+			<description>Modelo físico de datos</description>
+		</item>
+		
+		<item>
+			<title>Mapa web</title>
+			<link>
+				http://192.168.20.19/DAW209/public_html/ProyectoDWES/Aplicacion1819/doc/modelosAplicacion/190205_MapaWebMarioCasquero.jpg
+			</link>
+			<description>Mapa web</description>
+		</item>
+		
+		<item>
+			<title>Estructura de almacenamiento</title>
+			<link>
+				http://192.168.20.19/DAW209/public_html/ProyectoDWES/Aplicacion1819/doc/modelosAplicacion/190206_EstructuraAlmacenamientoMarioCasquero.JPG
+			</link>
+			<description>Estructura de almacenamiento</description>
+		</item>
+		
+		<item>
+			<title>Currículum Vitae</title>
+			<link>
+				http://192.168.20.19/DAW209/public_html/ProyectoDWES/Aplicacion1819/doc/modelosAplicacion/EIE_CVMarioCasquero.pdf
+			</link>
+			<description>Currículum vitae</description>
+		</item>
+		
+		<item>
+			<title>Web imitada</title>
+			<link>
+				https://www.gogoro.com
+			</link>
+			<description>Página web imitada</description>
+		</item>
+		
+		<item>
+			<title>Catálogo de requisitos</title>
+			<link>
+				http://192.168.20.19/DAW209/public_html/ProyectoDWES/Aplicacion1819/doc/modelosAplicacion/190205_CatalogoRequisitosMarioCasquero.pdf
+			</link>
+			<description>Página web imitada</description>
+		</item>
+		
+		<item>
+			<title>PHP Doc</title>
+			<link>
+				http://192.168.20.19/DAW209/public_html/ProyectoDWES/Aplicacion1819/doc/PHPdoc/index.html
+			</link>
+			<description>Documentación de la aplicación</description>
+		</item>
+		
+		<item>
+			<title>Repositorio</title>
+			<link>
+				http://daw-usgit.sauces.local/mario.casjan/MCJProyectoAplicacion1819/tree/Aplicacion1819
+			</link>
+			<description>Repositorio GitLab</description>
+		</item>
+	</channel>
+</rss>

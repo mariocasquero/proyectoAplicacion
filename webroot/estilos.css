@@ -1,0 +1,651 @@
+/* 
+    Created on : 23-ene-2019, 13:08:48
+    Author     : daw2
+*/
+/*LAYOUT*/
+body{
+    margin: 0px;
+    margin-top: -22.5px;
+    font-family: 'Montserrat', sans-serif;
+    background-image: linear-gradient(150deg,black, dimgrey);
+    background-image: -moz-linear-gradient(black, dimgrey);
+}
+
+header{
+    width: 100%;
+    height: 50px;
+    position: absolute;
+    top: 0px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: whitesmoke;
+    z-index: 2;
+}
+
+header img{
+    width: 32px;
+    height: 20px;
+    position: absolute;
+    left: 10px;
+    top: 30px;
+}
+
+header #segunda{
+    left: 50px;
+}
+
+.fa-home{
+    position: absolute;
+    top: 30px;
+    right: 10px;
+    color: white;
+    font-size: 30px;
+}
+
+.titulos{
+    position: absolute;
+    top: 7.5%;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    color: white;
+    font-size: 1.6em;
+}
+
+/*FORMULARIO LOGIN*/
+#fLogin{
+    height: 200px;
+    width: 200px;
+    position: absolute;
+    left: 55%;
+    top: 155px;
+    transform: translate(-65%, -50%);
+    color: whitesmoke;
+    font-size: 0.9em;
+}
+
+.campos{
+    position: absolute;
+    left: 10px;
+    font-size: 0.75em;
+}
+
+#usuario, #password{
+    position: absolute;
+    left: 75px;
+    height: 17.5px;
+}
+
+#acceder, #registrarse{
+    font-size: 0.9em;
+}
+
+.sesion{
+    width: 100px;
+    height: 50px;
+    color: white;
+    position: absolute;
+    top: 30px;
+    right: 30px;
+    cursor: pointer;   
+}
+
+.sesion p{
+    margin-top: 32.5px;
+    text-align: center;
+}
+
+.fa-user{
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    color: white;
+    font-size: 30px;
+}
+
+.sesion:hover p{
+    text-decoration: underline;
+}
+/*FIN FORMULARIO LOGIN*/
+
+.fondo{
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(150deg, mediumblue, cornflowerblue);
+    transform: skewY(10deg) translateY(-300px);
+    z-index: -1000;
+}
+
+footer{
+    width: 100%;
+    text-align: center;
+    font-size: 20px;
+    font-weight: bold;
+    color: whitesmoke;
+}
+
+
+legend{
+    font-size: 1.5em;
+    font-weight: bold;
+    color: whitesmoke;
+}
+
+fieldset{
+    border: solid 3px whitesmoke;
+}
+
+[type="submit"]{
+    font-size: 1.1em;
+    color: dimgey;
+    background-color: whitesmoke;
+    border-radius: 10px;
+    transition: all 0.4s ease-in-out;
+}
+
+[type="submit"]:hover{
+    color: whitesmoke;
+    background-color: dimgrey;
+}
+
+.errores{
+    display: block;
+    color: red;
+    font-weight: bold;
+    text-align: center;
+    background-color: white;
+    font-size: 0.9em;
+    margin: 5px;
+}
+
+i{
+    text-decoration: none;
+    font-size: 2em;
+    color: whitesmoke;
+}
+
+a{
+    text-decoration: none;
+    color: whitesmoke;
+}
+
+#phpdoc{
+    margin-bottom: -10px;
+    width: 40px;
+    height: 40px;
+}
+
+.fa-html5{
+    color: orangered;
+    font-size: 2.25em;
+    padding: 5px;
+    text-shadow: 0.5px 0.5px 3px whitesmoke;
+}
+
+.fa-css3-alt{
+    color: dodgerblue;
+    font-size: 2.25em;
+    padding: 5px;
+    text-shadow: 0.5px 0.5px 3px whitesmoke;
+}
+
+.fa-php{
+    color: mediumpurple;
+    font-size: 2.25em;
+    padding: 5px;
+    text-shadow: 0.5px 0.5px 3px whitesmoke;
+}
+
+.fa-js{
+    color: yellow;
+    font-size: 2.25em;
+    padding: 5px;
+    text-shadow: 0.5px 0.5px 3px whitesmoke;
+}
+
+.cuarto, .segundo{
+    width: 25%;
+    position: absolute;
+    bottom: 0px;
+    font-size: 0.9em;
+}
+
+.primero, .quinto{
+    width: 40%;
+    position: absolute;
+    bottom: 7.5%;
+    font-size: 0.9em;
+}
+
+.primero{
+    left: 25px;
+    text-align: left;
+}
+
+.segundo{
+    left: 25px;
+    text-align: left;
+}
+
+.tercero{
+    width: 45%;
+    position: absolute;
+    bottom: 0px;
+    text-align: center;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.cuarto{
+    right: 25px;
+    text-align: right;
+}
+
+.quinto{
+    right: 25px;
+    text-align: right;
+}
+/*FIN DE LAYOUT*/
+/*MODELOS LOGIN*/
+.modelos{
+    width: 70%;
+    position: absolute;
+    top: 35%;
+    left: 0%;
+    transform: translateY(-50%);
+}
+
+figure{
+    height: 175px;
+    width: 16%;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+figure:nth-child(2){
+    left: 17.5%;
+}
+
+figure:nth-child(3){
+    left: 35%;
+}
+
+figure:nth-child(4){
+    left: 52.5%;
+}
+
+figure:nth-child(5){
+    left: 70%;
+}
+
+img{
+    width: 100%;
+    height: 100%;
+}
+
+figcaption{
+    width: 100%;
+    color: black;
+    font-weight: bold;
+    text-align: center;
+    background-color: whitesmoke;
+    box-shadow: 2px 2px 7px dimgrey;
+}
+/*FIN MODELOS LOGIN*/
+/*FORMULARIO DE INICIO*/
+#fInicio{
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 1.4em;
+}
+
+#bSoap{
+    margin-left: 30px;
+}
+
+#editarPerfil{
+    margin-left: 15px;
+}
+/*FIN DE FORMULARIO DE INICIO*/
+/*BIENVENIDA INICIO*/
+.bienvenida1{
+    height: 75px;
+    width: 30%;
+    position: absolute;
+    top: 25%;
+    left: 2.5%;
+    font-size: 1.5em;
+    color: whitesmoke;
+    font-weight: bold;
+    overflow: visible;
+}
+
+.bienvenida2{
+    height: 75px;
+    width: 65%;
+    position: absolute;
+    top: 25%;
+    left: 32.5%;
+    font-size: 1.5em;
+    color: whitesmoke;
+    font-weight: bold;
+    overflow: visible;
+}
+
+#mensaje01{
+    transform: translateY(50px);
+    opacity: 0;
+    animation: mensaje01 0.75s ease-in-out 0.1s forwards;
+}
+
+#mensaje02{
+    transform: translateY(50px);
+    opacity: 0;
+    animation: mensaje02 0.75s ease-in-out 0.85s forwards;
+}
+/*FIN BIENVENIDA INICIO*/
+/*FORMULARIO REGISTRO*/
+#fRegistro{
+    width: 450px;
+    position: absolute;
+    left: 50%;
+    top: 35%;
+    transform: translate(-50%, -50%);
+    color: whitesmoke;
+}
+
+#usuarioR, #passwordR, #descripcionR{
+    position: absolute;
+    left: 130px;
+}
+/*FIN FORMULARIO REGISTRO*/
+/*FORMULARIO EDITAR PERFIL*/
+#fEdicion{
+    width: 450px;
+    position: absolute;
+    left: 50%;
+    top: 35%;
+    transform: translate(-50%, -50%);
+    color: whitesmoke;
+}
+
+#usuarioE, #passwordE, #descripcionE{
+    position: absolute;
+    left: 130px;
+}
+
+h2{
+    text-align: center;
+    color: whitesmoke;
+    text-shadow: 2px 2px 4px black;
+}
+
+.field2{
+    width: 300px;
+    height: 125px;
+    position: absolute;
+    top: 65%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#cPassword, #bUsuario{
+    margin-top: 10px;
+}
+/*FIN FORMULARIO EDITAR PERFIL*/
+/*FORMULARIO CAMBIAR PASSWORD*/
+#fPassword{
+    width: 450px;
+    position: absolute;
+    top: 35%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: whitesmoke;
+}
+
+#passwordNuevo, #passwordRepetido, #passwordViejo{
+    position: absolute;
+    left: 200px;
+}
+/*FIN FORMULARIO CAMBIAR PASSWORD*/
+/*FORMULARIO BORRAR USUARIO*/
+#fBorrar{
+    width: 400px;
+    position: absolute;
+    top: 35%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: whitesmoke;
+}
+
+#usuarioB, #descripcionB{
+    position: absolute;
+    left: 150px;
+}
+/*FIN FORMULARIO BORRAR USUARIO*/
+/*MANTENIMIENTO DEPARTAMENTOS*/
+#fDepartamentos{
+    position: absolute;
+    top: 10%;
+    left: 5%;
+    color: whitesmoke;
+    font-weight: bold;
+}
+
+table{
+    width: 80%;
+    position: absolute;
+    top: 20%;
+    left: 5%;
+    color: grey;    
+}
+
+th{
+    color: whitesmoke;
+}
+
+td{
+    border: solid 1px grey;
+    background-color: whitesmoke;
+}
+
+.descripcion{
+    width: 60%;
+}
+
+.centrado{
+    text-align: center;
+}
+
+.sinFondo{
+    background-color: transparent;
+    width: 100%;
+    height: 100%;
+    background-color: transparent;
+    border: none;
+}
+
+.sinFondo:hover{
+    background-color: transparent;
+}
+
+.fa-trash-alt, .fa-edit, .fa-arrow-alt-circle-down, .fa-arrow-alt-circle-up{
+    color: grey;
+    font-size: 2em;
+    margin-top: 10px;
+}
+
+.paginas{
+    width: 350px;
+    height: 30px;
+    line-height: 30px;
+    position: absolute;
+    top: 390px;
+    left: 20%;
+    text-align: center;
+    font-size: 1.2em;
+    font-weight: bold;
+    background-color: whitesmoke;
+    border-radius: 10px;
+}
+
+.paginas a{
+    color: black;
+}
+/*FIN MANTENIMIENTO DEPARTAMENTOS*/
+/*ALTA DEPARTAMENTOS*/
+#fAltaDep{
+    width: 500px;
+    position: absolute;
+    top: 35%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: whitesmoke;
+}
+
+#codDepartamento, #descDepartamento, #volNegocio{
+    position: absolute;
+    left: 250px;
+}
+/*FIN ALTA DEPARTAMENTOS*/
+/*ELIMINAR DEPARTAMENTO*/
+#fEliminarDep{
+    width: 500px;
+    position: absolute;
+    top: 35%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: whitesmoke;
+}
+/*FIN ELIMINAR DEPARTAMENTO*/
+/*MODIFICAR DEPARTAMENTO*/
+#fModificarDep{
+    width: 500px;
+    position: absolute;
+    top: 35%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: whitesmoke;
+}
+/*FIN DE MODIFICAR DEPARTAMENTO*/
+/*BAJA LÓGICA DEPARTAMENTO*/
+#fBajaLogica{
+    width: 500px;
+    position: absolute;
+    top: 35%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: whitesmoke;
+}
+
+#fechaBaja{
+    position: absolute;
+    left: 250px;
+}
+
+.baja td{
+    background-color: red;
+    color: whitesmoke;
+}
+
+.baja i{
+    color: whitesmoke;
+}
+/*FIN BAJA LÓGICA DEPARTAMENTO*/
+/*REHABILITAR DEPARTAMENTO*/
+#fRehabilitar{
+    width: 500px;
+    position: absolute;
+    top: 35%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: whitesmoke;
+}
+
+#fechaBaja{
+    position: absolute;
+    left: 250px;
+}
+
+.alta td{
+    background-color: limegreen;
+    color: whitesmoke;
+}
+
+.alta i{
+    color: whitesmoke;
+}
+/*FIN REHABILITAR DEPARTAMENTO*/
+/*SOAP REST*/
+#fSoapRest{
+    width: 350px;
+    position: absolute;
+    top: 10%;
+    left: 5%;
+    color: whitesmoke;
+}
+
+#ciudad, #pais{
+    position: absolute;
+    left: 100px;
+}
+
+.resultado{
+    width: 450px;
+    height: 350px;
+    position: absolute;
+    top: 10%;
+    right: 50px;
+    background-color: white;
+}
+
+.resultado label{
+    padding: 10px;
+    color: dimgrey;
+    text-shadow: 1px 1px 6px dimgrey;
+    font-size: 1.2em;
+}
+
+.salida{
+    width: 35%;
+    position: absolute;
+    top: 15%;
+    left: 40%;
+    font-size: 1.6em;
+    font-weight: bold;
+    color: dimgrey;
+    background-color: whitesmoke;
+    padding: 10px;
+    text-shadow: 1px 1px 2px black;
+    box-shadow: 3px 3px 15px black;
+}
+/*FIN SOAP REST*/
+/*ANIMACIONES*/
+@keyframes mensaje01{
+    0%{
+        transform: translateY(50px);
+        opacity: 0;
+    }
+    
+    100%{
+        transform: translateY(0px);
+        opacity: 1;
+    }
+}
+
+@keyframes mensaje02{
+    0%{
+        transform: translateY(50px);
+        opacity: 0;
+    }
+    
+    100%{
+        transform: translateY(0px);
+        opacity: 1;
+    }
+}
+/*FIN ANIMACIONES*/

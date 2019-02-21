@@ -1,0 +1,1360 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"/>
+    <meta charset="utf-8"/>
+    <title>Aplicacion</title>
+    <meta name="author" content=""/>
+    <meta name="description" content=""/>
+
+    <link href="../css/bootstrap-combined.no-icons.min.css" rel="stylesheet">
+    <link href="../css/font-awesome.min.css" rel="stylesheet">
+    <link href="../css/prism.css" rel="stylesheet" media="all"/>
+    <link href="../css/template.css" rel="stylesheet" media="all"/>
+    
+    <!--[if lt IE 9]>
+    <script src="../js/html5.js"></script>
+    <![endif]-->
+    <script src="../js/jquery-1.11.0.min.js"></script>
+    <script src="../js/ui/1.10.4/jquery-ui.min.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
+    <script src="../js/jquery.smooth-scroll.js"></script>
+    <script src="../js/prism.min.js"></script>
+    <!-- TODO: Add http://jscrollpane.kelvinluck.com/ to style the scrollbars for browsers not using webkit-->
+    <script type="text/javascript">
+    function loadExternalCodeSnippets() {
+        Array.prototype.slice.call(document.querySelectorAll('pre[data-src]')).forEach(function (pre) {
+            var src = pre.getAttribute('data-src');
+            var extension = (src.match(/\.(\w+)$/) || [, ''])[1];
+            var language = 'php';
+
+            var code = document.createElement('code');
+            code.className = 'language-' + language;
+
+            pre.textContent = '';
+
+            code.textContent = 'Loading…';
+
+            pre.appendChild(code);
+
+            var xhr = new XMLHttpRequest();
+
+            xhr.open('GET', src, true);
+
+            xhr.onreadystatechange = function () {
+                if (xhr.readyState == 4) {
+
+                    if (xhr.status < 400 && xhr.responseText) {
+                        code.textContent = xhr.responseText;
+
+                        Prism.highlightElement(code);
+                    }
+                    else if (xhr.status >= 400) {
+                        code.textContent = '✖ Error ' + xhr.status + ' while fetching file: ' + xhr.statusText;
+                    }
+                    else {
+                        code.textContent = '✖ Error: File does not exist or is empty';
+                    }
+                }
+            };
+
+            xhr.send(null);
+        });
+    }
+
+    $(document).ready(function(){
+        loadExternalCodeSnippets();
+    });
+    $('#source-view').on('shown', function () {
+        loadExternalCodeSnippets();
+    })
+</script>
+
+    <link rel="shortcut icon" href="../images/favicon.ico"/>
+    <link rel="apple-touch-icon" href="../images/apple-touch-icon.png"/>
+    <link rel="apple-touch-icon" sizes="72x72" href="../images/apple-touch-icon-72x72.png"/>
+    <link rel="apple-touch-icon" sizes="114x114" href="../images/apple-touch-icon-114x114.png"/>
+</head>
+<body>
+
+<div class="navbar navbar-fixed-top">
+    <div class="navbar-inner">
+        <div class="container">
+            <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+                <i class="icon-ellipsis-vertical"></i>
+            </a>
+            <a class="brand" href="../index.html">Aplicacion</a>
+
+            <div class="nav-collapse">
+                <ul class="nav pull-right">
+                                        <li class="dropdown" id="charts-menu">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                            Charts <b class="caret"></b>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li>
+                                <a href="../graphs/class.html">
+                                    <i class="icon-list-alt"></i>&#160;Class hierarchy diagram
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="dropdown" id="reports-menu">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                            Reports <b class="caret"></b>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li>
+                                <a href="../reports/errors.html">
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                <i class="icon-list-alt"></i>&#160;Errors <span class="label label-info pull-right">0</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="../reports/markers.html">
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                <i class="icon-list-alt"></i>&#160;Markers <span class="label label-info pull-right">0</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="../reports/deprecated.html">
+                                                                                                            <i class="icon-list-alt"></i>&#160;Deprecated <span class="label label-info pull-right">0</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!--<div class="go_to_top">-->
+    <!--<a href="#___" style="color: inherit">Back to top&#160;&#160;<i class="icon-upload icon-white"></i></a>-->
+    <!--</div>-->
+</div>
+
+<div id="___" class="container-fluid">
+        <section class="row-fluid">
+        <div class="span2 sidebar">
+                                <div class="accordion" style="margin-bottom: 0">
+        <div class="accordion-group">
+            <div class="accordion-heading">
+                                    <a class="accordion-toggle " data-toggle="collapse" data-target="#namespace-858435867"></a>
+                                <a href="../namespaces/default.html" style="margin-left: 30px; padding-left: 0">\</a>
+            </div>
+            <div id="namespace-858435867" class="accordion-body collapse in">
+                <div class="accordion-inner">
+
+                    
+                    <ul>
+                                                    <li class="interface"><a href="../classes/UsuarioDB.html">UsuarioDB</a></li>
+                                                                                                    <li class="class"><a href="../classes/DBPDO.html">DBPDO</a></li>
+                                                    <li class="class"><a href="../classes/Departamento.html">Departamento</a></li>
+                                                    <li class="class"><a href="../classes/DepartamentoPDO.html">DepartamentoPDO</a></li>
+                                                    <li class="class"><a href="../classes/Rest.html">Rest</a></li>
+                                                    <li class="class"><a href="../classes/Usuario.html">Usuario</a></li>
+                                                    <li class="class"><a href="../classes/UsuarioPDO.html">UsuarioPDO</a></li>
+                                            </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+        </div>
+    </section>
+    <section class="row-fluid">
+        <div class="span10 offset2">
+            <div class="row-fluid">
+                <div class="span8 content class">
+                    <nav>
+                                                <a href="../namespaces/default.html">\</a> <i class="icon-level-up"></i>
+                                            </nav>
+                    <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal"><i class="icon-code"></i></a>
+
+                    <h1><small>\</small>Departamento</h1>
+                    <p><em>Class Departamento</em></p>
+                    <p>Clase que crea, borra, modifica y valida departamentos</p>
+                    
+                                        
+                    <section id="summary">
+                        <h2>Summary</h2>
+                        <section class="row-fluid heading">
+                            <section class="span4">
+                                <a href="#methods">Methods</a>
+                            </section>
+                            <section class="span4">
+                                <a href="#properties">Properties</a>
+                            </section>
+                            <section class="span4">
+                                <a href="#constants">Constants</a>
+                            </section>
+                        </section>
+                        <section class="row-fluid public">
+                            <section class="span4">
+                                                                    <a href="../classes/Departamento.html#method___construct" class="">__construct()</a><br />
+                                                                    <a href="../classes/Departamento.html#method_getCodDepartamento" class="">getCodDepartamento()</a><br />
+                                                                    <a href="../classes/Departamento.html#method_getDescDepartamento" class="">getDescDepartamento()</a><br />
+                                                                    <a href="../classes/Departamento.html#method_getFechaCreacionDepartamento" class="">getFechaCreacionDepartamento()</a><br />
+                                                                    <a href="../classes/Departamento.html#method_getVolumenDeNegocio" class="">getVolumenDeNegocio()</a><br />
+                                                                    <a href="../classes/Departamento.html#method_getFechaBajaDepartamento" class="">getFechaBajaDepartamento()</a><br />
+                                                                    <a href="../classes/Departamento.html#method_setCodDepartamento" class="">setCodDepartamento()</a><br />
+                                                                    <a href="../classes/Departamento.html#method_setDescDepartamento" class="">setDescDepartamento()</a><br />
+                                                                    <a href="../classes/Departamento.html#method_setFechaCreacionDepartamento" class="">setFechaCreacionDepartamento()</a><br />
+                                                                    <a href="../classes/Departamento.html#method_setVolumenDeNegocio" class="">setVolumenDeNegocio()</a><br />
+                                                                    <a href="../classes/Departamento.html#method_setFechaBajaDepartamento" class="">setFechaBajaDepartamento()</a><br />
+                                                                    <a href="../classes/Departamento.html#method_buscaDepartamentoPorCodigo" class="">buscaDepartamentoPorCodigo()</a><br />
+                                                                    <a href="../classes/Departamento.html#method_buscaDepartamentoPorDescripcion" class="">buscaDepartamentoPorDescripcion()</a><br />
+                                                                    <a href="../classes/Departamento.html#method_contarDepartamentos" class="">contarDepartamentos()</a><br />
+                                                                    <a href="../classes/Departamento.html#method_altaDepartamento" class="">altaDepartamento()</a><br />
+                                                                    <a href="../classes/Departamento.html#method_bajaFisicaDepartamento" class="">bajaFisicaDepartamento()</a><br />
+                                                                    <a href="../classes/Departamento.html#method_modificarDepartamento" class="">modificarDepartamento()</a><br />
+                                                                    <a href="../classes/Departamento.html#method_bajaLogicaDepartamento" class="">bajaLogicaDepartamento()</a><br />
+                                                                    <a href="../classes/Departamento.html#method_rehabilitarDepartamento" class="">rehabilitarDepartamento()</a><br />
+                                                                    <a href="../classes/Departamento.html#method_validaCodNoExiste" class="">validaCodNoExiste()</a><br />
+                                                            </section>
+                            <section class="span4">
+                                                                    <em>No public properties found</em>
+                                                            </section>
+                            <section class="span4">
+                                                                    <em>No constants found</em>
+                                                            </section>
+                        </section>
+                        <section class="row-fluid protected">
+                            <section class="span4">
+                                                                    <em>No protected methods found</em>
+                                                            </section>
+                            <section class="span4">
+                                                                    <em>No protected properties found</em>
+                                                            </section>
+                            <section class="span4">
+                                <em>N/A</em>
+                            </section>
+                        </section>
+                        <section class="row-fluid private">
+                            <section class="span4">
+                                                                    <em>No private methods found</em>
+                                                            </section>
+                            <section class="span4">
+                                                                    <a href="../classes/Departamento.html#property_codDepartamento" class="">$codDepartamento</a><br />
+                                                                    <a href="../classes/Departamento.html#property_descDepartamento" class="">$descDepartamento</a><br />
+                                                                    <a href="../classes/Departamento.html#property_fechaCreacionDepartamento" class="">$fechaCreacionDepartamento</a><br />
+                                                                    <a href="../classes/Departamento.html#property_volumenDeNegocio" class="">$volumenDeNegocio</a><br />
+                                                                    <a href="../classes/Departamento.html#property_fechaBajaDepartamento" class="">$fechaBajaDepartamento</a><br />
+                                                            </section>
+                            <section class="span4">
+                                <em>N/A</em>
+                            </section>
+                        </section>
+                    </section>
+                </div>
+                <aside class="span4 detailsbar">
+                                        
+                    
+                    <dl>
+                        <dt>File</dt>
+                            <dd><a href="../files/Departamento.html"><div class="path-wrapper">Departamento.php</div></a></dd>
+                                                <dt>Package</dt>
+                            <dd><div class="namespace-wrapper">modelo</div></dd>
+                                                <dt>Class hierarchy</dt>
+                            <dd class="hierarchy">
+                                                                                                                                                                    <div class="namespace-wrapper">\Departamento</div>
+                            </dd>
+
+                        
+                        
+                        
+                        
+                                                                        </dl>
+                    <h2>Tags</h2>
+                    <table class="table table-condensed">
+                                            <tr>
+                            <th>
+                                author
+                            </th>
+                            <td>
+                                                                    <p>Mario Casquero Jáñez</p>
+                                                            </td>
+                        </tr>
+                                        </table>
+                </aside>
+            </div>
+
+                        
+                                    <a id="properties" name="properties"></a>
+            <div class="row-fluid">
+                <div class="span8 content class">
+                    <h2>Properties</h2>
+                </div>
+                <aside class="span4 detailsbar"></aside>
+            </div>
+
+                                                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="property_codDepartamento" name="property_codDepartamento" class="anchor"></a>
+            <article class="property">
+                <h3 class="private ">$codDepartamento</h3>
+                <pre class="signature">$codDepartamento : string</pre>
+                <p><em></em></p>
+                
+
+                                <h4>Type</h4>
+                string
+                &mdash; código del departamento                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                        <dl>
+                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="property_descDepartamento" name="property_descDepartamento" class="anchor"></a>
+            <article class="property">
+                <h3 class="private ">$descDepartamento</h3>
+                <pre class="signature">$descDepartamento : string</pre>
+                <p><em></em></p>
+                
+
+                                <h4>Type</h4>
+                string
+                &mdash; descripción del departamento                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                        <dl>
+                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="property_fechaCreacionDepartamento" name="property_fechaCreacionDepartamento" class="anchor"></a>
+            <article class="property">
+                <h3 class="private ">$fechaCreacionDepartamento</h3>
+                <pre class="signature">$fechaCreacionDepartamento : integer</pre>
+                <p><em></em></p>
+                
+
+                                <h4>Type</h4>
+                integer
+                &mdash; marca de tiempo de la creación del departamento                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                        <dl>
+                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="property_volumenDeNegocio" name="property_volumenDeNegocio" class="anchor"></a>
+            <article class="property">
+                <h3 class="private ">$volumenDeNegocio</h3>
+                <pre class="signature">$volumenDeNegocio : integer</pre>
+                <p><em></em></p>
+                
+
+                                <h4>Type</h4>
+                integer
+                &mdash; ingresos del departamento                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                        <dl>
+                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="property_fechaBajaDepartamento" name="property_fechaBajaDepartamento" class="anchor"></a>
+            <article class="property">
+                <h3 class="private ">$fechaBajaDepartamento</h3>
+                <pre class="signature">$fechaBajaDepartamento : integer</pre>
+                <p><em></em></p>
+                
+
+                                <h4>Type</h4>
+                integer
+                &mdash; marca de tiempo de la baja del departamento                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                        <dl>
+                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                            
+                                    <a id="methods" name="methods"></a>
+            <div class="row-fluid">
+                <div class="span8 content class"><h2>Methods</h2></div>
+                <aside class="span4 detailsbar"></aside>
+            </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method___construct" name="method___construct" class="anchor"></a>
+            <article class="method">
+                <h3 class="public ">__construct()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">__construct(string  <span class="argument">$codDepartamento</span>, string  <span class="argument">$descDepartamento</span>, integer  <span class="argument">$fechaCreacionDepartamento</span>, integer  <span class="argument">$volumenDeNegocio</span>, integer  <span class="argument">$fechaBajaDepartamento</span>) </pre>
+                <p><em>Función constructor</em></p>
+                <p>Última revisión 04/02/2019
+Crea el objeto departamento con los parámetros recibidos</p>
+
+                                    <h4>Parameters</h4>
+                    <table class="table table-condensed table-hover">
+                                                    <tr>
+                                <td>string</td>
+                                <td>$codDepartamento </td>
+                                <td><p>código del departamento</p></td>
+                            </tr>
+                                                    <tr>
+                                <td>string</td>
+                                <td>$descDepartamento </td>
+                                <td><p>descripción del departamento</p></td>
+                            </tr>
+                                                    <tr>
+                                <td>integer</td>
+                                <td>$fechaCreacionDepartamento </td>
+                                <td><p>marca de tiempo de la creación del departamento</p></td>
+                            </tr>
+                                                    <tr>
+                                <td>integer</td>
+                                <td>$volumenDeNegocio </td>
+                                <td><p>ingresos del departamento</p></td>
+                            </tr>
+                                                    <tr>
+                                <td>integer</td>
+                                <td>$fechaBajaDepartamento </td>
+                                <td><p>marca de tiempo de la baja del departamento</p></td>
+                            </tr>
+                                            </table>
+                
+                
+Warning: count(): Parameter must be an array or an object that implements Countable in phar://D:/software/phpDocumentor.phar/vendor/twig/twig/lib/Twig/Extension/Core.php on line 1376
+
+Warning: count(): Parameter must be an array or an object that implements Countable in phar://D:/software/phpDocumentor.phar/vendor/twig/twig/lib/Twig/Extension/Core.php on line 1376
+
+                				
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr>
+                        <th>
+                            author
+                        </th>
+                        <td>
+                                                                                            <p>Mario Casquero Jáñez</p>
+                                                    </td>
+                    </tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_getCodDepartamento" name="method_getCodDepartamento" class="anchor"></a>
+            <article class="method">
+                <h3 class="public ">getCodDepartamento()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">getCodDepartamento() : string</pre>
+                <p><em>Función getCodDepartamento</em></p>
+                <p>Devuelve el código del departamento</p>
+
+                
+                
+Warning: count(): Parameter must be an array or an object that implements Countable in phar://D:/software/phpDocumentor.phar/vendor/twig/twig/lib/Twig/Extension/Core.php on line 1376
+
+Warning: count(): Parameter must be an array or an object that implements Countable in phar://D:/software/phpDocumentor.phar/vendor/twig/twig/lib/Twig/Extension/Core.php on line 1376
+
+                                    <h4>Returns</h4>
+                    string
+                                    				
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_getDescDepartamento" name="method_getDescDepartamento" class="anchor"></a>
+            <article class="method">
+                <h3 class="public ">getDescDepartamento()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">getDescDepartamento() : string</pre>
+                <p><em>Función getDescDepartamento</em></p>
+                <p>Devuelve la descripción del departamento</p>
+
+                
+                
+Warning: count(): Parameter must be an array or an object that implements Countable in phar://D:/software/phpDocumentor.phar/vendor/twig/twig/lib/Twig/Extension/Core.php on line 1376
+
+Warning: count(): Parameter must be an array or an object that implements Countable in phar://D:/software/phpDocumentor.phar/vendor/twig/twig/lib/Twig/Extension/Core.php on line 1376
+
+                                    <h4>Returns</h4>
+                    string
+                                    				
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_getFechaCreacionDepartamento" name="method_getFechaCreacionDepartamento" class="anchor"></a>
+            <article class="method">
+                <h3 class="public ">getFechaCreacionDepartamento()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">getFechaCreacionDepartamento() : integer</pre>
+                <p><em>Función getFechaCreacionDepartamento</em></p>
+                <p>Devuelve la fecha de la creación del departamento</p>
+
+                
+                
+Warning: count(): Parameter must be an array or an object that implements Countable in phar://D:/software/phpDocumentor.phar/vendor/twig/twig/lib/Twig/Extension/Core.php on line 1376
+
+Warning: count(): Parameter must be an array or an object that implements Countable in phar://D:/software/phpDocumentor.phar/vendor/twig/twig/lib/Twig/Extension/Core.php on line 1376
+
+                                    <h4>Returns</h4>
+                    integer
+                                    				
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_getVolumenDeNegocio" name="method_getVolumenDeNegocio" class="anchor"></a>
+            <article class="method">
+                <h3 class="public ">getVolumenDeNegocio()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">getVolumenDeNegocio() : integer</pre>
+                <p><em>Función getVolumenDeNegocio</em></p>
+                <p>Devuelve el volumen de negocio</p>
+
+                
+                
+Warning: count(): Parameter must be an array or an object that implements Countable in phar://D:/software/phpDocumentor.phar/vendor/twig/twig/lib/Twig/Extension/Core.php on line 1376
+
+Warning: count(): Parameter must be an array or an object that implements Countable in phar://D:/software/phpDocumentor.phar/vendor/twig/twig/lib/Twig/Extension/Core.php on line 1376
+
+                                    <h4>Returns</h4>
+                    integer
+                                    				
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_getFechaBajaDepartamento" name="method_getFechaBajaDepartamento" class="anchor"></a>
+            <article class="method">
+                <h3 class="public ">getFechaBajaDepartamento()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">getFechaBajaDepartamento() : integer</pre>
+                <p><em>Función getFechaBajaDepartamento</em></p>
+                <p>Devuelve la fecha de baja del departamento</p>
+
+                
+                
+Warning: count(): Parameter must be an array or an object that implements Countable in phar://D:/software/phpDocumentor.phar/vendor/twig/twig/lib/Twig/Extension/Core.php on line 1376
+
+Warning: count(): Parameter must be an array or an object that implements Countable in phar://D:/software/phpDocumentor.phar/vendor/twig/twig/lib/Twig/Extension/Core.php on line 1376
+
+                                    <h4>Returns</h4>
+                    integer
+                                    				
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_setCodDepartamento" name="method_setCodDepartamento" class="anchor"></a>
+            <article class="method">
+                <h3 class="public ">setCodDepartamento()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">setCodDepartamento(string  <span class="argument">$codDepartamento</span>) </pre>
+                <p><em>Función setCodDepartamento</em></p>
+                <p>Modifica el código de departamento</p>
+
+                                    <h4>Parameters</h4>
+                    <table class="table table-condensed table-hover">
+                                                    <tr>
+                                <td>string</td>
+                                <td>$codDepartamento </td>
+                                <td><p>código del departamento</p></td>
+                            </tr>
+                                            </table>
+                
+                
+Warning: count(): Parameter must be an array or an object that implements Countable in phar://D:/software/phpDocumentor.phar/vendor/twig/twig/lib/Twig/Extension/Core.php on line 1376
+
+Warning: count(): Parameter must be an array or an object that implements Countable in phar://D:/software/phpDocumentor.phar/vendor/twig/twig/lib/Twig/Extension/Core.php on line 1376
+
+                				
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_setDescDepartamento" name="method_setDescDepartamento" class="anchor"></a>
+            <article class="method">
+                <h3 class="public ">setDescDepartamento()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">setDescDepartamento(string  <span class="argument">$descDepartamento</span>) </pre>
+                <p><em>Función setDescDepartamento</em></p>
+                <p>Modifica la descripción del departamento</p>
+
+                                    <h4>Parameters</h4>
+                    <table class="table table-condensed table-hover">
+                                                    <tr>
+                                <td>string</td>
+                                <td>$descDepartamento </td>
+                                <td><p>descripción del departamento</p></td>
+                            </tr>
+                                            </table>
+                
+                
+Warning: count(): Parameter must be an array or an object that implements Countable in phar://D:/software/phpDocumentor.phar/vendor/twig/twig/lib/Twig/Extension/Core.php on line 1376
+
+Warning: count(): Parameter must be an array or an object that implements Countable in phar://D:/software/phpDocumentor.phar/vendor/twig/twig/lib/Twig/Extension/Core.php on line 1376
+
+                				
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_setFechaCreacionDepartamento" name="method_setFechaCreacionDepartamento" class="anchor"></a>
+            <article class="method">
+                <h3 class="public ">setFechaCreacionDepartamento()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">setFechaCreacionDepartamento(integer  <span class="argument">$fechaCreacionDepartamento</span>) </pre>
+                <p><em>Función setFechaCreaciónDepartamento</em></p>
+                <p>Modifica la fecha de creación del departamento</p>
+
+                                    <h4>Parameters</h4>
+                    <table class="table table-condensed table-hover">
+                                                    <tr>
+                                <td>integer</td>
+                                <td>$fechaCreacionDepartamento </td>
+                                <td><p>marca de tiempo de la creación del departamento</p></td>
+                            </tr>
+                                            </table>
+                
+                
+Warning: count(): Parameter must be an array or an object that implements Countable in phar://D:/software/phpDocumentor.phar/vendor/twig/twig/lib/Twig/Extension/Core.php on line 1376
+
+Warning: count(): Parameter must be an array or an object that implements Countable in phar://D:/software/phpDocumentor.phar/vendor/twig/twig/lib/Twig/Extension/Core.php on line 1376
+
+                				
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_setVolumenDeNegocio" name="method_setVolumenDeNegocio" class="anchor"></a>
+            <article class="method">
+                <h3 class="public ">setVolumenDeNegocio()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">setVolumenDeNegocio(integer  <span class="argument">$volumenDeNegocio</span>) </pre>
+                <p><em>Función setVolumenDeNegocio</em></p>
+                <p>Modifica los ingresos del departamento</p>
+
+                                    <h4>Parameters</h4>
+                    <table class="table table-condensed table-hover">
+                                                    <tr>
+                                <td>integer</td>
+                                <td>$volumenDeNegocio </td>
+                                <td><p>ingresos del departamento</p></td>
+                            </tr>
+                                            </table>
+                
+                
+Warning: count(): Parameter must be an array or an object that implements Countable in phar://D:/software/phpDocumentor.phar/vendor/twig/twig/lib/Twig/Extension/Core.php on line 1376
+
+Warning: count(): Parameter must be an array or an object that implements Countable in phar://D:/software/phpDocumentor.phar/vendor/twig/twig/lib/Twig/Extension/Core.php on line 1376
+
+                				
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_setFechaBajaDepartamento" name="method_setFechaBajaDepartamento" class="anchor"></a>
+            <article class="method">
+                <h3 class="public ">setFechaBajaDepartamento()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">setFechaBajaDepartamento(integer  <span class="argument">$fechaBajaDepartamento</span>) </pre>
+                <p><em>Función setFechaBajaDepartamento</em></p>
+                <p>Modifica la fecha de baja del departamento</p>
+
+                                    <h4>Parameters</h4>
+                    <table class="table table-condensed table-hover">
+                                                    <tr>
+                                <td>integer</td>
+                                <td>$fechaBajaDepartamento </td>
+                                <td><p>marca de tiempo de la baja del departamento</p></td>
+                            </tr>
+                                            </table>
+                
+                
+Warning: count(): Parameter must be an array or an object that implements Countable in phar://D:/software/phpDocumentor.phar/vendor/twig/twig/lib/Twig/Extension/Core.php on line 1376
+
+Warning: count(): Parameter must be an array or an object that implements Countable in phar://D:/software/phpDocumentor.phar/vendor/twig/twig/lib/Twig/Extension/Core.php on line 1376
+
+                				
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_buscaDepartamentoPorCodigo" name="method_buscaDepartamentoPorCodigo" class="anchor"></a>
+            <article class="method">
+                <h3 class="public ">buscaDepartamentoPorCodigo()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">buscaDepartamentoPorCodigo(string  <span class="argument">$codDepartamento</span>) : \Departamento</pre>
+                <p><em>Función buscaDepartamentoPorCodigo</em></p>
+                <p>Última revisión 06/02/2019
+Extrae toda la información del departamento en base al código proporcionado</p>
+
+                                    <h4>Parameters</h4>
+                    <table class="table table-condensed table-hover">
+                                                    <tr>
+                                <td>string</td>
+                                <td>$codDepartamento </td>
+                                <td><p>código del departamento</p></td>
+                            </tr>
+                                            </table>
+                
+                
+Warning: count(): Parameter must be an array or an object that implements Countable in phar://D:/software/phpDocumentor.phar/vendor/twig/twig/lib/Twig/Extension/Core.php on line 1376
+
+Warning: count(): Parameter must be an array or an object that implements Countable in phar://D:/software/phpDocumentor.phar/vendor/twig/twig/lib/Twig/Extension/Core.php on line 1376
+
+                                    <h4>Returns</h4>
+                    <a href="../classes/Departamento.html">\Departamento</a>
+                                            &mdash; <p>$departamento objeto de la clase departamento con los atributos de éste</p>
+                                    				
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                            <span class="label label-info">static</span>
+                                                            <dl>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr>
+                        <th>
+                            author
+                        </th>
+                        <td>
+                                                                                            <p>Mario Casquero Jáñez</p>
+                                                    </td>
+                    </tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_buscaDepartamentoPorDescripcion" name="method_buscaDepartamentoPorDescripcion" class="anchor"></a>
+            <article class="method">
+                <h3 class="public ">buscaDepartamentoPorDescripcion()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">buscaDepartamentoPorDescripcion(string  <span class="argument">$descDepartamento</span>, string  <span class="argument">$filtro</span>, integer  <span class="argument">$pagina</span>, integer  <span class="argument">$tamanyoPag</span>) : \Departamento</pre>
+                <p><em>Función buscaDepartamentoPorDescripcion</em></p>
+                <p>Última revisión 06/02/2019
+Extrae toda la información de todos los departamentos coincidentes</p>
+
+                                    <h4>Parameters</h4>
+                    <table class="table table-condensed table-hover">
+                                                    <tr>
+                                <td>string</td>
+                                <td>$descDepartamento </td>
+                                <td><p>descripción del departamento</p></td>
+                            </tr>
+                                                    <tr>
+                                <td>string</td>
+                                <td>$filtro </td>
+                                <td><p>criterio de búsqueda</p></td>
+                            </tr>
+                                                    <tr>
+                                <td>integer</td>
+                                <td>$pagina </td>
+                                <td><p>página actual de la ventana</p></td>
+                            </tr>
+                                                    <tr>
+                                <td>integer</td>
+                                <td>$tamanyoPag </td>
+                                <td><p>número de registros por página</p></td>
+                            </tr>
+                                            </table>
+                
+                
+Warning: count(): Parameter must be an array or an object that implements Countable in phar://D:/software/phpDocumentor.phar/vendor/twig/twig/lib/Twig/Extension/Core.php on line 1376
+
+Warning: count(): Parameter must be an array or an object that implements Countable in phar://D:/software/phpDocumentor.phar/vendor/twig/twig/lib/Twig/Extension/Core.php on line 1376
+
+                                    <h4>Returns</h4>
+                    <a href="../classes/Departamento.html">\Departamento</a>
+                                            &mdash; <p>$aDepartamentos array de objetos de la clase departamento con los atributos de éste</p>
+                                    				
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                            <span class="label label-info">static</span>
+                                                            <dl>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr>
+                        <th>
+                            author
+                        </th>
+                        <td>
+                                                                                            <p>Mario Casquero Jáñez</p>
+                                                    </td>
+                    </tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_contarDepartamentos" name="method_contarDepartamentos" class="anchor"></a>
+            <article class="method">
+                <h3 class="public ">contarDepartamentos()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">contarDepartamentos(string  <span class="argument">$descDepartamento</span>, string  <span class="argument">$filtro</span>) : integer</pre>
+                <p><em>Función contarDepartamentos</em></p>
+                <p>Última revisión 06/02/2019
+Cuenta el número total de departamentos</p>
+
+                                    <h4>Parameters</h4>
+                    <table class="table table-condensed table-hover">
+                                                    <tr>
+                                <td>string</td>
+                                <td>$descDepartamento </td>
+                                <td><p>descripción del departamento</p></td>
+                            </tr>
+                                                    <tr>
+                                <td>string</td>
+                                <td>$filtro </td>
+                                <td><p>criterio de búsqueda</p></td>
+                            </tr>
+                                            </table>
+                
+                
+Warning: count(): Parameter must be an array or an object that implements Countable in phar://D:/software/phpDocumentor.phar/vendor/twig/twig/lib/Twig/Extension/Core.php on line 1376
+
+Warning: count(): Parameter must be an array or an object that implements Countable in phar://D:/software/phpDocumentor.phar/vendor/twig/twig/lib/Twig/Extension/Core.php on line 1376
+
+                                    <h4>Returns</h4>
+                    integer
+                                            &mdash; <p>número de departamentos totales</p>
+                                    				
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                            <span class="label label-info">static</span>
+                                                            <dl>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr>
+                        <th>
+                            author
+                        </th>
+                        <td>
+                                                                                            <p>Mario Casquero Jáñez</p>
+                                                    </td>
+                    </tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_altaDepartamento" name="method_altaDepartamento" class="anchor"></a>
+            <article class="method">
+                <h3 class="public ">altaDepartamento()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">altaDepartamento(string  <span class="argument">$codDepartamento</span>, string  <span class="argument">$descDepartamento</span>, integer  <span class="argument">$volumenDeNegocio</span>) : \Departamento</pre>
+                <p><em>Función altaDepartamento</em></p>
+                <p>Última revisión 04/02/2019
+registra un nuevo departamento en la aplicación</p>
+
+                                    <h4>Parameters</h4>
+                    <table class="table table-condensed table-hover">
+                                                    <tr>
+                                <td>string</td>
+                                <td>$codDepartamento </td>
+                                <td><p>código del departamento</p></td>
+                            </tr>
+                                                    <tr>
+                                <td>string</td>
+                                <td>$descDepartamento </td>
+                                <td><p>descripción del departamento</p></td>
+                            </tr>
+                                                    <tr>
+                                <td>integer</td>
+                                <td>$volumenDeNegocio </td>
+                                <td><p>ingresos del departamento</p></td>
+                            </tr>
+                                            </table>
+                
+                
+Warning: count(): Parameter must be an array or an object that implements Countable in phar://D:/software/phpDocumentor.phar/vendor/twig/twig/lib/Twig/Extension/Core.php on line 1376
+
+Warning: count(): Parameter must be an array or an object that implements Countable in phar://D:/software/phpDocumentor.phar/vendor/twig/twig/lib/Twig/Extension/Core.php on line 1376
+
+                                    <h4>Returns</h4>
+                    <a href="../classes/Departamento.html">\Departamento</a>
+                                            &mdash; <p>$departamento objeto de la clase departamento con los atributos de éste</p>
+                                    				
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                            <span class="label label-info">static</span>
+                                                            <dl>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr>
+                        <th>
+                            author
+                        </th>
+                        <td>
+                                                                                            <p>Mario Casquero Jáñez</p>
+                                                    </td>
+                    </tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_bajaFisicaDepartamento" name="method_bajaFisicaDepartamento" class="anchor"></a>
+            <article class="method">
+                <h3 class="public ">bajaFisicaDepartamento()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">bajaFisicaDepartamento(string  <span class="argument">$codDepartamento</span>) : boolean</pre>
+                <p><em>Función bajaFisicaDepartamento</em></p>
+                <p>Última revisión 04/02/2019
+Borra un departamento de la aplicación</p>
+
+                                    <h4>Parameters</h4>
+                    <table class="table table-condensed table-hover">
+                                                    <tr>
+                                <td>string</td>
+                                <td>$codDepartamento </td>
+                                <td><p>código del departamento</p></td>
+                            </tr>
+                                            </table>
+                
+                
+Warning: count(): Parameter must be an array or an object that implements Countable in phar://D:/software/phpDocumentor.phar/vendor/twig/twig/lib/Twig/Extension/Core.php on line 1376
+
+Warning: count(): Parameter must be an array or an object that implements Countable in phar://D:/software/phpDocumentor.phar/vendor/twig/twig/lib/Twig/Extension/Core.php on line 1376
+
+                                    <h4>Returns</h4>
+                    boolean
+                                            &mdash; <p>dependiendo de si todo es correcto o no</p>
+                                    				
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr>
+                        <th>
+                            author
+                        </th>
+                        <td>
+                                                                                            <p>Mario Casquero Jáñez</p>
+                                                    </td>
+                    </tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_modificarDepartamento" name="method_modificarDepartamento" class="anchor"></a>
+            <article class="method">
+                <h3 class="public ">modificarDepartamento()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">modificarDepartamento(string  <span class="argument">$descDepartamento</span>, integer  <span class="argument">$volumenDeNegocio</span>) : boolean</pre>
+                <p><em>Función modificarDepartamento</em></p>
+                <p>Última revisión 04/02/2019
+Modifica un departamento de la aplicación</p>
+
+                                    <h4>Parameters</h4>
+                    <table class="table table-condensed table-hover">
+                                                    <tr>
+                                <td>string</td>
+                                <td>$descDepartamento </td>
+                                <td><p>descripción del departamento</p></td>
+                            </tr>
+                                                    <tr>
+                                <td>integer</td>
+                                <td>$volumenDeNegocio </td>
+                                <td><p>ingresos del departamento</p></td>
+                            </tr>
+                                            </table>
+                
+                
+Warning: count(): Parameter must be an array or an object that implements Countable in phar://D:/software/phpDocumentor.phar/vendor/twig/twig/lib/Twig/Extension/Core.php on line 1376
+
+Warning: count(): Parameter must be an array or an object that implements Countable in phar://D:/software/phpDocumentor.phar/vendor/twig/twig/lib/Twig/Extension/Core.php on line 1376
+
+                                    <h4>Returns</h4>
+                    boolean
+                                            &mdash; <p>dependiendo de si todo es correcto o no</p>
+                                    				
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr>
+                        <th>
+                            author
+                        </th>
+                        <td>
+                                                                                            <p>Mario Casquero Jáñez</p>
+                                                    </td>
+                    </tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_bajaLogicaDepartamento" name="method_bajaLogicaDepartamento" class="anchor"></a>
+            <article class="method">
+                <h3 class="public ">bajaLogicaDepartamento()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">bajaLogicaDepartamento(integer  <span class="argument">$fechaBajaDepartamento</span>) : boolean</pre>
+                <p><em>Función bajaLogicaDepartamento</em></p>
+                <p>Última revisión 05/02/2019
+Da de baja temporal, un departamento de la aplicación</p>
+
+                                    <h4>Parameters</h4>
+                    <table class="table table-condensed table-hover">
+                                                    <tr>
+                                <td>integer</td>
+                                <td>$fechaBajaDepartamento </td>
+                                <td><p>marca de tiempo de la creación del departamento</p></td>
+                            </tr>
+                                            </table>
+                
+                
+Warning: count(): Parameter must be an array or an object that implements Countable in phar://D:/software/phpDocumentor.phar/vendor/twig/twig/lib/Twig/Extension/Core.php on line 1376
+
+Warning: count(): Parameter must be an array or an object that implements Countable in phar://D:/software/phpDocumentor.phar/vendor/twig/twig/lib/Twig/Extension/Core.php on line 1376
+
+                                    <h4>Returns</h4>
+                    boolean
+                                            &mdash; <p>dependiendo de si todo es correcto o no</p>
+                                    				
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr>
+                        <th>
+                            author
+                        </th>
+                        <td>
+                                                                                            <p>Mario Casquero Jáñez</p>
+                                                    </td>
+                    </tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_rehabilitarDepartamento" name="method_rehabilitarDepartamento" class="anchor"></a>
+            <article class="method">
+                <h3 class="public ">rehabilitarDepartamento()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">rehabilitarDepartamento() : boolean</pre>
+                <p><em>Función rehabilitarDepartamento</em></p>
+                <p>Última revisión 05/02/2019
+Da de alta un departamento que estaba de baja temporal o lógica</p>
+
+                
+                
+Warning: count(): Parameter must be an array or an object that implements Countable in phar://D:/software/phpDocumentor.phar/vendor/twig/twig/lib/Twig/Extension/Core.php on line 1376
+
+Warning: count(): Parameter must be an array or an object that implements Countable in phar://D:/software/phpDocumentor.phar/vendor/twig/twig/lib/Twig/Extension/Core.php on line 1376
+
+                                    <h4>Returns</h4>
+                    boolean
+                                            &mdash; <p>dependiendo de si todo es correcto o no</p>
+                                    				
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr>
+                        <th>
+                            author
+                        </th>
+                        <td>
+                                                                                            <p>Mario Casquero Jáñez</p>
+                                                    </td>
+                    </tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_validaCodNoExiste" name="method_validaCodNoExiste" class="anchor"></a>
+            <article class="method">
+                <h3 class="public ">validaCodNoExiste()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">validaCodNoExiste(string  <span class="argument">$codDepartamento</span>) : boolean</pre>
+                <p><em>Función validaCodNoExiste</em></p>
+                <p>Última revisión 04/02/2019</p>
+
+                                    <h4>Parameters</h4>
+                    <table class="table table-condensed table-hover">
+                                                    <tr>
+                                <td>string</td>
+                                <td>$codDepartamento </td>
+                                <td><p>código del departamento</p></td>
+                            </tr>
+                                            </table>
+                
+                
+Warning: count(): Parameter must be an array or an object that implements Countable in phar://D:/software/phpDocumentor.phar/vendor/twig/twig/lib/Twig/Extension/Core.php on line 1376
+
+Warning: count(): Parameter must be an array or an object that implements Countable in phar://D:/software/phpDocumentor.phar/vendor/twig/twig/lib/Twig/Extension/Core.php on line 1376
+
+                                    <h4>Returns</h4>
+                    boolean
+                                            &mdash; <p>dependiendo de si no existe ningún departamento</p>
+                                    				
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                            <span class="label label-info">static</span>
+                                                            <dl>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr>
+                        <th>
+                            author
+                        </th>
+                        <td>
+                                                                                            <p>Mario Casquero Jáñez</p>
+                                                    </td>
+                    </tr>
+                            </table>
+        </aside>
+    </div>
+
+                                                                    </div>
+    </section>
+
+    <div id="source-view" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="source-view-label" aria-hidden="true">
+        <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+            <h3 id="source-view-label">Departamento.php</h3>
+        </div>
+        <div class="modal-body">
+            <pre data-src="../files/Departamento.php.txt" class="language-php line-numbers"></pre>
+        </div>
+    </div>
+
+    <footer class="row-fluid">
+        <section class="span10 offset2">
+            <section class="row-fluid">
+                <section class="span10 offset1">
+                    <section class="row-fluid footer-sections">
+                        <section class="span4">
+                                                        <h1><i class="icon-code"></i></h1>
+                            <div>
+                                <ul>
+                                                                    </ul>
+                            </div>
+                        </section>
+                        <section class="span4">
+                                                        <h1><i class="icon-bar-chart"></i></h1>
+                            <div>
+                                <ul>
+                                    <li><a href="../graphs/class.html">Class Hierarchy Diagram</a></li>
+                                </ul>
+                            </div>
+                        </section>
+                        <section class="span4">
+                                                        <h1><i class="icon-pushpin"></i></h1>
+                            <div>
+                                <ul>
+                                    <li><a href="../reports/errors.html">Errors</a></li>
+                                    <li><a href="../reports/markers.html">Markers</a></li>
+                                </ul>
+                            </div>
+                        </section>
+                    </section>
+                </section>
+            </section>
+            <section class="row-fluid">
+                <section class="span10 offset1">
+                    <hr />
+                    Documentation is powered by <a href="http://www.phpdoc.org/">phpDocumentor </a> and authored
+                    on February 11th, 2019 at 12:03.
+                </section>
+            </section>
+        </section>
+    </footer>
+</div>
+
+</body>
+</html>

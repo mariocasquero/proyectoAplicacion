@@ -1,0 +1,957 @@
+/* 
+    Created on : 23-ene-2019, 13:08:48
+    Author     : Mario Casquero Jáñez
+*/
+/*LAYOUT*/
+body{
+    margin: 0px;
+    margin-top: -22.5px;
+    background-color: #293132;
+}
+
+@font-face{
+    font-family: 'TravelingTypewriter';
+    src: url(../fonts/TravelingTypewriter.ttf);
+}
+
+header{
+    width: 100%;
+    height: 50px;
+    position: absolute;
+    top: 0px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: #54F2F2;
+    z-index: 2;
+}
+
+header img{
+    width: 32px;
+    height: 20px;
+    position: absolute;
+    left: 10px;
+    top: 30px;
+}
+
+header #segunda{
+    left: 50px;
+}
+
+h1{
+    font-family: 'TravelingTypewriter';
+}
+
+.fa-home{
+    position: absolute;
+    top: 30px;
+    right: 10px;
+    color: white;
+    font-size: 30px;
+}
+
+/*FORMULARIO LOGIN*/
+#fLogin{
+    height: 200px;
+    width: 200px;
+    position: absolute;
+    left: 55%;
+    top: 155px;
+    transform: translate(-65%, -50%);
+    color: #CC5803;
+    font-size: 0.9em;
+    visibility: hidden;
+}
+
+.campos{
+    position: absolute;
+    left: 10px;
+    font-size: 0.85em;
+    color: #CC5803;
+}
+
+#usuario, #password{
+    position: absolute;
+    left: 75px;
+    height: 17.5px;
+}
+
+#acceder, #registrarse{
+    font-size: 1em;
+    color: whitesmoke;
+    background-color: #CC5803;
+}
+
+.sesion{
+    width: 100px;
+    height: 50px;
+    color: #CC5803;
+    position: absolute;
+    top: 30px;
+    right: 30px;
+    cursor: pointer;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.sesion #botonSalir{
+    height: 50px;
+    width: 125px;
+    margin-top: -12.5px;
+    margin-left: -17.5px;
+    visibility: hidden;
+}
+
+.sesion p{
+    margin-top: 32.5px;
+    text-align: center;
+}
+
+.fa-user{
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    color: #CC5803;
+    font-size: 30px;
+}
+
+.sesion:hover p{
+    text-decoration: underline;
+}
+
+.sesion:hover #fLogin{
+    visibility: visible;
+}
+
+.sesion:hover #botonSalir{
+    visibility: visible;
+}
+/*FIN FORMULARIO LOGIN*/
+footer{
+    width: 98.5%;
+    height: 40%;
+    position: absolute;
+    top: 585%;
+    font-size: 1em;
+    font-weight: bold;
+    font-family: 'Montserrat', sans-serif;
+    color: #54F2F2;
+    border-top: solid 5px whitesmoke;
+}
+
+.nombre{
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 2em;
+    color: #54F2F2;
+}
+
+.izquierda{
+    width: 17.5%;
+    position: absolute;
+    left: 10px;
+    top: 30%;
+}
+
+.centro{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translateX(-50%);
+    color: #E3B505;
+    font-size: 1.5em;
+}
+
+.derecha{
+    width: 17.5%;
+    position: absolute;
+    right: 10px;
+    top: 30%;
+}
+
+#tecnologias{
+    background-color: #E3B505;
+    color: #293132;
+}
+
+i{
+    text-decoration: none;
+    font-size: 1.5em;
+    color: #E3B505;
+    margin-right: 10px;
+}
+
+#phpdoc{
+    width: 30px;
+    height: 30px;
+    margin-bottom: -5px;
+}
+
+a{
+    text-decoration: none;
+    color: #E3B505;
+}
+
+legend{
+    font-size: 1.5em;
+    font-weight: bold;
+    color: #CC5803;
+}
+
+fieldset{
+    border: solid 3px #CC5803;
+}
+
+[type="text"], [type="password"]{
+    border: none;
+    outline: none;
+    background-color: #293132;
+    border-bottom: 1px solid whitesmoke;
+    color: whitesmoke;
+    caret-color: whitesmoke;
+}
+
+[type="submit"]{
+    font-size: 1.1em;
+    color: whitesmoke;
+    background-color: #CC5803;
+    border: none;
+    border-radius: 5px;
+    transition: all 0.4s ease-in-out;
+}
+
+[type="submit"]:hover{
+    color: #293132;
+    background-color: #54F2F2;
+}
+
+.errores{
+    display: block;
+    color: #E3B505;
+    font-weight: bold;
+    text-align: center;
+    font-size: 0.9em;
+    margin: 2.5px 0px;
+}
+
+/*FIN DE LAYOUT*/
+/*MODELOS LOGIN*/
+section{
+    height: 100%;
+    width: 90%;
+    position: absolute;
+    top: 20%;
+    left: 1%;
+}
+
+.modelo{
+    height: 75%;
+    width: 100%;
+    position: absolute;
+    visibility: hidden;
+    font-size: 2em;
+}
+
+.animacion{
+    animation: slideup 1.5s ease;
+    visibility: visible;
+}
+
+.usos{
+    top: 80%;
+    height: 100%;
+    font-size: 1.7em;
+}
+
+.navegacion{
+    top: 185%;
+    height: 100%;
+}
+
+.almacenamiento{
+    top: 290%;
+    height: 100%;
+    font-size: 1.5em;
+}
+
+.datos{
+    height: 60%;
+    top: 395%;
+}
+
+.mapa{
+    top: 460%;
+    height: 100%;
+}
+
+.modelo img{
+    width: 60%;
+    height: 100%;
+}
+
+.modelo p{
+    height: 15%;
+    width: 39%;
+    position: absolute;
+    top: 50%;
+    right: 0px;
+    transform: translateY(-50%) rotate(3.5deg);
+    color: #293132;
+    background-color: whitesmoke;
+    box-shadow: 2px 2px 8px #54F2F2;
+    font-family: 'TravelingTypewriter';
+}
+
+.almacenamiento p, .usos p, .mapa p{
+    height: 7.5%;
+    transform: translateY(-50%) rotate(-3.5deg);
+}
+
+.navegacion p{
+    transform: translateY(-50%) rotate(3.5deg);
+}
+/*FIN MODELOS LOGIN*/
+/*TECNOLOGÍAS UTILIZADAS*/
+#volverTec{
+    position: absolute;
+    top: 7.5%;
+    left: 0%;
+    font-size: 1.5em;
+    height: 50px;
+}
+
+.tecno{
+    width: 85%;
+    height: 65%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-family: 'Montserrat', sans-serif;
+    color: #293132;
+    font-weight: bold;
+}
+
+.tec, .her{
+    width: 15%;
+    height: 10%;
+    border-radius: 5px;
+    text-align: center;
+    font-size: 100%;
+    z-index: -10;
+}
+
+.tec{
+    background-color: #54F2F2;
+}
+
+.her{
+    background-color: #CC5803;
+}
+
+.tec a, .her a{
+    color: #293132;
+}
+
+.inf{
+    width: 98%;
+    height: 0px;
+    margin-top: 25px;
+    z-index: 10;
+    text-align: left;
+    padding: 0px 2.5px;
+    transition: all 1s ease-in-out 0.1s;
+}
+
+.tec .inf{
+    background-color: #54F2F2;
+}
+
+.her .inf{
+    background-color: #CC5803;
+}
+
+.fa-male{
+    position: absolute;
+    top: 45%;
+    left: 51.25%;
+    transform: translate(-50%, -50%);
+    font-size: 4.5em;
+}
+
+.netbeans{
+    position: absolute;
+    left: 40%;
+    top: 55%;
+    transform: translate(-50%, -50%);
+}
+
+.workbench{
+    position: absolute;
+    left: 62.5%;
+    top: 55%;
+    transform: translate(-50%, -50%);
+}
+
+.tec:nth-child(1){
+    position: absolute;
+    left: 7.5%;
+    top: 30%;
+    transform: translate(-50%, -50%);
+}
+
+.tec:nth-child(2){
+    position: absolute;
+    left: 25%;
+    top: 15%;
+    transform: translate(-50%, -50%);
+}
+
+.tec:nth-child(3){
+    position: absolute;
+    left: 42.5%;
+    top: 10%;
+    transform: translate(-50%, -50%);
+}
+
+.tec:nth-child(4){
+    position: absolute;
+    left: 60%;
+    top: 10%;
+    transform: translate(-50%, -50%);
+}
+
+.tec:nth-child(5){
+    position: absolute;
+    left: 77.5%;
+    top: 15%;
+    transform: translate(-50%, -50%);
+}
+
+.tec:nth-child(6){
+    position: absolute;
+    left: 95%;
+    top: 30%;
+    transform: translate(-50%, -50%);
+}
+
+.tec:hover .inf, .her:hover .inf{
+    width: 98%;
+    height: 150px;
+}
+/*FIN TECNOLOGÍAS UTILIZADAS*/
+/*FORMULARIO DE INICIO*/
+#fInicio{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 1.4em;
+}
+
+#mtoDepartamentos{
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+#editarPerfil{
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+/*FIN DE FORMULARIO DE INICIO*/
+/*BIENVENIDA INICIO*/
+.bienvenida1{
+    height: 75px;
+    width: 30%;
+    position: absolute;
+    top: 25%;
+    left: 2.5%;
+    font-size: 1.5em;
+    color: whitesmoke;
+    font-weight: bold;
+    overflow: visible;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.bienvenida2{
+    height: 75px;
+    width: 65%;
+    position: absolute;
+    top: 25%;
+    left: 32.5%;
+    font-size: 1.5em;
+    color: whitesmoke;
+    font-weight: bold;
+    overflow: visible;
+    font-family: 'Montserrat', sans-serif;
+}
+
+#mensaje01{
+    transform: translateY(50px);
+    opacity: 0;
+    animation: mensaje01 0.75s ease-in-out 0.1s forwards;
+}
+
+#mensaje02{
+    transform: translateY(50px);
+    opacity: 0;
+    animation: mensaje02 0.75s ease-in-out 0.85s forwards;
+}
+
+.pie{
+    width: 100%;
+    position: absolute;
+    bottom: 0px;
+    text-align: center;
+    color: #54F2F2;
+    font-size: 1.1em;
+    font-family: 'TravelingTypewriter';
+}
+
+.pie i{
+    color: #54F2F2;
+}
+/*FIN BIENVENIDA INICIO*/
+/*FORMULARIO REGISTRO*/
+#fRegistro{
+    width: 450px;
+    position: absolute;
+    left: 50%;
+    top: 35%;
+    transform: translate(-50%, -50%);
+    color: whitesmoke;
+    font-family: 'Montserrat', sans-serif;
+}
+
+#usuarioR, #passwordR, #descripcionR{
+    position: absolute;
+    left: 130px;
+}
+/*FIN FORMULARIO REGISTRO*/
+/*FORMULARIO EDITAR PERFIL*/
+#fEdicion{
+    width: 450px;
+    position: absolute;
+    left: 50%;
+    top: 35%;
+    transform: translate(-50%, -50%);
+    color: whitesmoke;
+    font-family: 'Montserrat', sans-serif;
+}
+
+#usuarioE, #passwordE, #descripcionE{
+    position: absolute;
+    left: 130px;
+}
+
+h2{
+    text-align: center;
+    color: whitesmoke;
+    text-shadow: 2px 2px 4px black;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.field2{
+    width: 300px;
+    height: 125px;
+    position: absolute;
+    top: 65%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#cPassword, #bUsuario{
+    margin-top: 10px;
+}
+/*FIN FORMULARIO EDITAR PERFIL*/
+/*FORMULARIO CAMBIAR PASSWORD*/
+#fPassword{
+    width: 450px;
+    position: absolute;
+    top: 35%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: whitesmoke;
+    font-family: 'Montserrat', sans-serif;
+}
+
+#passwordNuevo, #passwordRepetido, #passwordViejo{
+    position: absolute;
+    left: 200px;
+}
+/*FIN FORMULARIO CAMBIAR PASSWORD*/
+/*FORMULARIO BORRAR USUARIO*/
+#fBorrar{
+    width: 400px;
+    position: absolute;
+    top: 35%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: whitesmoke;
+    font-family: 'Montserrat', sans-serif;
+}
+
+#usuarioB, #descripcionB{
+    position: absolute;
+    left: 150px;
+}
+/*FIN FORMULARIO BORRAR USUARIO*/
+/*MANTENIMIENTO DEPARTAMENTOS*/
+#fDepartamentos{
+    position: absolute;
+    top: 10%;
+    left: 5%;
+    color: whitesmoke;
+    font-weight: bold;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.criterioBus{
+    border: solid 2px whitesmoke;
+    padding: 10px;
+}
+
+table{
+    width: 80%;
+    position: absolute;
+    top: 25%;
+    left: 5%;
+    color: grey;
+    font-family: 'Montserrat', sans-serif;    
+}
+
+th{
+    color: whitesmoke;
+}
+
+td{
+    border: solid 1px grey;
+    background-color: whitesmoke;
+}
+
+.descripcion{
+    width: 60%;
+}
+
+.centrado{
+    text-align: center;
+}
+
+.sinFondo{
+    background-color: transparent;
+    width: 100%;
+    height: 100%;
+    background-color: transparent;
+    border: none;
+}
+
+.sinFondo:hover{
+    background-color: transparent;
+}
+
+.fa-trash-alt, .fa-edit, .fa-arrow-alt-circle-down, .fa-arrow-alt-circle-up{
+    color: grey;
+    font-size: 2em;
+    margin-top: 10px;
+}
+
+.paginas{
+    width: 60%;
+    height: 5%;
+    line-height: -5%;
+    position: absolute;
+    top: 65%;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    font-size: 1.2em;
+    font-weight: bold;
+    color: #E3B505;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.paginas a{
+    color: #E3B505;
+}
+/*FIN MANTENIMIENTO DEPARTAMENTOS*/
+/*MANTENIMIENTO USUARIOS*/
+#fMtoUsuarios{
+    position: absolute;
+    top: 10%;
+    left: 5%;
+    color: whitesmoke;
+    font-weight: bold;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.tablaUsuarios{
+    width: 60%;
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    transform: translateX(-50%);
+    color: whitesmoke;
+    font-family: 'Montserrat', sans-serif;    
+}
+
+td{
+    background-color: #CC5803;
+}
+
+#bU, #eU{
+    color: whitesmoke;
+}
+
+.codigo{
+    width: 20%;
+    text-align: center;
+}
+
+.dUsuario{
+    width: 40%;
+}
+
+.perfil{
+    width: 20%;
+    text-align: center;
+}
+
+.paginacion{
+    width: 60%;
+    height: 5%;
+    line-height: -5%;
+    position: absolute;
+    top: 65%;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    font-size: 1.2em;
+    font-weight: bold;
+    color: #E3B505;
+    font-family: 'Montserrat', sans-serif;
+}
+/*FIN MANTENIMIENTO USUARIOS*/
+/*ALTA DEPARTAMENTOS*/
+#fAltaDep{
+    width: 500px;
+    position: absolute;
+    top: 35%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: whitesmoke;
+    font-family: 'Montserrat', sans-serif;
+}
+
+#codDepartamento, #descDepartamento, #volNegocio{
+    position: absolute;
+    left: 250px;
+}
+/*FIN ALTA DEPARTAMENTOS*/
+/*ELIMINAR DEPARTAMENTO*/
+#fEliminarDep{
+    width: 500px;
+    position: absolute;
+    top: 35%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: whitesmoke;
+    font-family: 'Montserrat', sans-serif;
+}
+/*FIN ELIMINAR DEPARTAMENTO*/
+/*MODIFICAR DEPARTAMENTO*/
+#fModificarDep{
+    width: 500px;
+    position: absolute;
+    top: 35%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: whitesmoke;
+    font-family: 'Montserrat', sans-serif;
+}
+/*FIN DE MODIFICAR DEPARTAMENTO*/
+/*BAJA LÓGICA DEPARTAMENTO*/
+#fBajaLogica{
+    width: 500px;
+    position: absolute;
+    top: 35%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: whitesmoke;
+    font-family: 'Montserrat', sans-serif;
+}
+
+#fechaBaja{
+    position: absolute;
+    left: 250px;
+}
+
+.baja td{
+    background-color: dimgrey;
+    color: whitesmoke;
+    font-weight: bold;
+    font-style: italic;
+}
+
+.baja i{
+    color: whitesmoke;
+}
+/*FIN BAJA LÓGICA DEPARTAMENTO*/
+/*REHABILITAR DEPARTAMENTO*/
+#fRehabilitar{
+    width: 500px;
+    position: absolute;
+    top: 35%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: whitesmoke;
+    font-family: 'Montserrat', sans-serif;
+}
+
+#fechaBaja{
+    position: absolute;
+    left: 250px;
+}
+
+.alta td{
+    background-color: #E3B505;
+    color: #293132;
+    font-weight: bold;
+}
+
+.alta i{
+    color: #293132;
+}
+/*FIN REHABILITAR DEPARTAMENTO*/
+/*ELIMINAR PERFIL*/
+#fEliminarPer{
+    width: 500px;
+    position: absolute;
+    top: 35%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: whitesmoke;
+    font-family: 'Montserrat', sans-serif;
+}
+/*FIN ELIMINAR PERFIL*/
+/*MODIFICAR PERFIL*/
+#fModificarPer{
+    width: 500px;
+    position: absolute;
+    top: 35%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: whitesmoke;
+    font-family: 'Montserrat', sans-serif;
+}
+/*FIN MODIFICAR PERFIL*/
+/*SOAP REST*/
+#fSoapRest{
+    width: 350px;
+    position: absolute;
+    top: 10%;
+    left: 5%;
+    color: whitesmoke;
+    font-family: 'Montserrat', sans-serif;
+}
+
+#fSoapCatastro{
+    width: 350px;
+    position: absolute;
+    top: 40%;
+    left: 5%;
+    color: whitesmoke;
+    font-family: 'Montserrat', sans-serif;
+}
+
+#ciudad, #pais{
+    position: absolute;
+    left: 100px;
+}
+
+.resultado{
+    width: 30%;
+    height: 375px;
+    position: absolute;
+    top: 12.5%;
+    left: 40%;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.resultado label{
+    padding: 10px;
+    color: #E3B505;
+    text-shadow: 1px 1px 6px dimgrey;
+    font-size: 1.2em;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.salida{
+    width: 35%;
+    position: absolute;
+    top: 15%;
+    left: 40%;
+    font-size: 1.6em;
+    font-weight: bold;
+    color: #E3B505;
+    padding: 10px;
+    text-shadow: 1px 1px 2px black;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.dos{
+    top: 42.5%;
+}
+/*FIN SOAP REST*/
+/*ANIMACIONES*/
+@keyframes mensaje01{
+    0%{
+        transform: translateY(50px);
+        opacity: 0;
+    }
+    
+    100%{
+        transform: translateY(0px);
+        opacity: 1;
+    }
+}
+
+@keyframes mensaje02{
+    0%{
+        transform: translateY(50px);
+        opacity: 0;
+    }
+    
+    100%{
+        transform: translateY(0px);
+        opacity: 1;
+    }
+}
+
+@keyframes slideup{
+    0%{
+        transform: translateY(100%);
+    }
+    
+    50%{
+        transform: translateY(-8%);
+    }
+    
+    65%{
+        transform: translateY(4%);
+    }
+    
+    80%{
+        transform: translateY(-4%);
+    }
+    
+    95%{
+        transform: translateY(2%);
+    }
+    
+    100%{
+        transform: translateY(0%);
+    }
+}
+/*FIN ANIMACIONES*/
